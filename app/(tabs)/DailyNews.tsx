@@ -1,11 +1,14 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { Text } from "react-native";
+import {
+  SafeAreaView
+} from "react-native-safe-area-context";
 
 const News = () => {
   return (
-    <View>
+    <SafeAreaView>
       <Text>You'll see AI Generated news here...</Text>
-    </View>
+    </SafeAreaView>
   );
 };
 
