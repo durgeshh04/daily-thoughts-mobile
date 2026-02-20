@@ -1,9 +1,8 @@
-export type AuthInputProps = {
+import type { TextInputProps } from "react-native";
+
+export type AuthInputProps = TextInputProps & {
   label?: string;
-  placeholder: string;
-  value: string;
-  onChangeText: (text: string) => void;
-  secureTextEntry?: boolean;
+  error?: string;
 };
 
 export type LoginPayload = {
@@ -11,9 +10,8 @@ export type LoginPayload = {
   password: string;
 };
 
-export type SignupPayload = {
-  email?: string;
-  mobile?: string;
+export type SignupFormValues = {
+  identifier: string;
   username: string;
   fullname: string;
   password: string;

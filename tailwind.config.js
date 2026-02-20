@@ -4,7 +4,15 @@ module.exports = {
   content: ["./app/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}"],
   presets: [require("nativewind/preset")],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        "quicksand-regular": ["QuickSand-Regular"],
+        "quicksand-bold": ["QuickSand-Bold"],
+        "quicksand-semibold": ["QuickSand-SemiBold"],
+        "quicksand-light": ["QuickSand-Light"],
+        "quicksand-medium": ["QuickSand-Medium"],
+      },
+    },
   },
   plugins: [],
 };
