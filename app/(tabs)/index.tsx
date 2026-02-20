@@ -11,7 +11,7 @@ export default function Index() {
 
   return (
     <SafeAreaView>
-      <Text>Hello World!</Text>
+      <Text className="bg-blue-500 text-5xl text-center">Hello World!</Text>
     </SafeAreaView>
   );
 }
