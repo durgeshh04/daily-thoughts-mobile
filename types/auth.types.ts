@@ -5,7 +5,7 @@ export type AuthInputProps = TextInputProps & {
   error?: string;
 };
 
-export type LoginPayload = {
+export type LoginFormValues = {
   identifier: string;
   password: string;
 };
