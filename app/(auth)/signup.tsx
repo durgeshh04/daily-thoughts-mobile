@@ -1,6 +1,8 @@
 import AuthInput from "@/components/auth/AuthInput";
 import Button from "@/components/ui/Button";
 import { SignupFormValues } from "@/types";
+import { signupSchema } from "@/validation/authSchemas";
+import { yupResolver } from "@hookform/resolvers/yup";
 import { Link } from "expo-router";
 import { Controller, useForm } from "react-hook-form";
 import {
@@ -19,6 +21,7 @@ const Signup = () => {
     handleSubmit,
     formState: { isSubmitting },
   } = useForm<SignupFormValues>({
+    resolver: yupResolver(signupSchema),
     defaultValues: {
       identifier: "",
       username: "",

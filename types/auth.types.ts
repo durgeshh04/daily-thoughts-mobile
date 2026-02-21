@@ -5,14 +5,8 @@ export type AuthInputProps = TextInputProps & {
   error?: string;
 };
 
-export type LoginFormValues = {
-  identifier: string;
-  password: string;
-};
+export type {
+  LoginFormValues,
+  SignupFormValues
+} from "@/validation/authSchemas";
 
-export type SignupFormValues = {
-  identifier: string;
-  username: string;
-  fullname: string;
-  password: string;
-};
