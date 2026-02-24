@@ -3,7 +3,7 @@ import Button from "@/components/ui/Button";
 import { LoginFormValues } from "@/types";
 import { loginSchema } from "@/validation/authSchemas";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { Link } from "expo-router";
+import { Link, router } from "expo-router";
 import React from "react";
 import { Controller, useForm } from "react-hook-form";
 import {
@@ -30,8 +30,13 @@ const Login = () => {
     mode: "onTouched",
   });
 
-  const onSubmit = (values: LoginFormValues) => {
-    console.log("Login credentials:", values);
+  const onSubmit = async (values: LoginFormValues) => {
+    try {
+      console.log("Login Credentials:", values);
+      router.replace("/");
+    } catch (error) {
+      console.log("Login failed:", error);
+    }
   };
 
   return (
@@ -152,7 +157,7 @@ const Login = () => {
           {/* Sign Up Link */}
           <View className="flex-row justify-center items-center">
             <Text className="text-gray-600 font-quicksand-regular">
-              Don't have an account?{" "}
+              Do not have an account?{" "}
             </Text>
             <Link href="/(auth)/signup">
               <Text className="text-blue-500 font-quicksand-bold">Sign Up</Text>
